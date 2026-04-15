@@ -19,6 +19,10 @@ app.add_middleware(
 def read_trees(db: Session = Depends(get_db)):
     return db.query(models.Tree).all()
 
+@app.get("/test")
+def test():
+    return {"message": "API is working!"}
+
 @app.post("/trees")
 def save_new_tree(tree_input: dict, db: Session = Depends(get_db)):
     new_record = models.Tree(data=tree_input)
