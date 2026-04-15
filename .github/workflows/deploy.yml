@@ -20,7 +20,7 @@ jobs:
             set -e
             
             # 1. Navigate to the project directory
-            cd /home/ubuntu/TreeViewApp-backend
+            cd /home/ubuntu/TreeViewApp-Backend
             
             # 2. Pull the latest changes from the main branch
             git pull origin main
